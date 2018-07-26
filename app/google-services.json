@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "491893275362",
+    "firebase_url": "https://mharo-bikaner.firebaseio.com",
+    "project_id": "mharo-bikaner",
+    "storage_bucket": "mharo-bikaner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:491893275362:android:2c76b5a808d98f87",
+        "android_client_info": {
+          "package_name": "com.technawabs.app.mharo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "491893275362-c0oi0soimcjdbq9e7f8edj78s3ufbj75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.technawabs.app.mharo",
+            "certificate_hash": "a08fdbbb2a7b4696745d0cdd568a0cbd0db6c55f"
+          }
+        },
+        {
+          "client_id": "491893275362-k71aso890odnjmm8kark5l1jlklids8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbXI0D6L6e9w_z__mYbD2sod9hpIDsRJY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "491893275362-k71aso890odnjmm8kark5l1jlklids8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
