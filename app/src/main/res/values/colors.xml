@@ -7,4 +7,17 @@
     <color name="grey_100">#F5F5F5</color>
     <color name="grey_300">#E0E0E0</color>
     <color name="grey_500">#9E9E9E</color>
+
+    <color name="transparent">#00ffffff</color>
+
+    <color name="bgGradientStart">#000000</color>
+    <color name="bgGradientEnd">#d8000000</color>
+
+    <color name="bgSolidDark">#55000000</color>
+
+    <color name="headGradientStart">#00ffffff</color>
+    <color name="headGradientCenter">#00ffffff</color>
+    <color name="headGradientEnd">#96000000</color>
+
+    <color name="colorListDivider">#e6e6e6</color>
 </resources>

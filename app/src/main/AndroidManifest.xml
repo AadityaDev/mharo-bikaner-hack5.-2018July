@@ -36,22 +36,25 @@
         <activity android:name=".base.activities.HomeActivity" />
         <activity
             android:name=".base.scanner.LivePreviewActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity android:name=".base.scanner.ChooserActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".base.scanner.StillImageActivity" />
-        <activity android:name=".base.SplashActivity">
+        <activity android:name=".base.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".base.activities.DashboardActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.technawabs.app.mharo.base;
+package com.technawabs.app.mharo.base.activities;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.technawabs.app.mharo.R;
@@ -44,7 +43,8 @@ public class SplashActivity extends AppCompatActivity {
     {
 //        this.makeText(getBaseContext(),"Clicked", Toast.LENGTH_SHORT).show();
 
-        Intent myIntent = new Intent(SplashActivity.this, LivePreviewActivity.class);
+//        Intent myIntent = new Intent(SplashActivity.this, LivePreviewActivity.class);
+        Intent myIntent = new Intent(SplashActivity.this, DashboardActivity.class);
         startActivity(myIntent);
     }
 
