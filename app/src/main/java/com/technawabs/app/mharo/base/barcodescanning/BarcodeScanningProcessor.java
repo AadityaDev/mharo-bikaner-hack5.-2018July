@@ -77,7 +77,8 @@ public class BarcodeScanningProcessor extends VisionProcessorBase<List<FirebaseV
       if(barcode!=null&&barcode.getRawValue()!=null){
           String res = barcode.getRawValue();
           boolean isValidXML=XMLReader.readXMLResponse(res);
-          if(isValidXML){
+          if(isValidXML||res.startsWith("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+                  "<PrintLetterBarcodeData ")){
               Intent intent = new Intent(context,DashboardActivity.class);
               context.startActivity(intent);
           }
