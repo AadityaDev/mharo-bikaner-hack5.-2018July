@@ -36,10 +36,6 @@ import com.technawabs.app.mharo.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Demo app chooser which takes care of runtime permission requesting and allows you to pick from
- * all available testing Activities.
- */
 public final class ChooserActivity extends AppCompatActivity
     implements OnRequestPermissionsResultCallback, AdapterView.OnItemClickListener {
   private static final String TAG = "ChooserActivity";
