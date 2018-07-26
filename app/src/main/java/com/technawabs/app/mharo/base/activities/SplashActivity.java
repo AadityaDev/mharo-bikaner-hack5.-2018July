@@ -43,8 +43,8 @@ public class SplashActivity extends AppCompatActivity {
     {
 //        this.makeText(getBaseContext(),"Clicked", Toast.LENGTH_SHORT).show();
 
-//        Intent myIntent = new Intent(SplashActivity.this, LivePreviewActivity.class);
-        Intent myIntent = new Intent(SplashActivity.this, DashboardActivity.class);
+        Intent myIntent = new Intent(SplashActivity.this, LivePreviewActivity.class);
+//        Intent myIntent = new Intent(SplashActivity.this, DashboardActivity.class);
         startActivity(myIntent);
     }
 

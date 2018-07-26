@@ -164,7 +164,7 @@ public final class LivePreviewActivity extends AppCompatActivity
           break;
         case BARCODE_DETECTION:
           Log.i(TAG, "Using Barcode Detector Processor");
-          cameraSource.setMachineLearningFrameProcessor(new BarcodeScanningProcessor());
+          cameraSource.setMachineLearningFrameProcessor(new BarcodeScanningProcessor(this));
           break;
         case IMAGE_LABEL_DETECTION:
           Log.i(TAG, "Using Image Label Detector Processor");

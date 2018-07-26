@@ -12,7 +12,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 public class XMLReader {
 
-    public static void readXMLResponse(String response) {
+    public static boolean readXMLResponse(String response) {
+        boolean result = false;
         try {
             File file = new File(response);
             DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance()
@@ -21,9 +22,11 @@ public class XMLReader {
             if (doc.hasChildNodes()) {
                 printNote(doc.getChildNodes());
             }
-
+            result = true;
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            result = false;
+        }finally {
+            return  result;
         }
 
     }

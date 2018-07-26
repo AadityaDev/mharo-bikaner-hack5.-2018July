@@ -13,6 +13,8 @@
 // limitations under the License.
 package com.technawabs.app.mharo.base.barcodescanning;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -21,9 +23,11 @@ import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode;
 import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcodeDetector;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
+import com.technawabs.app.mharo.base.activities.DashboardActivity;
 import com.technawabs.app.mharo.base.scanner.FrameMetadata;
 import com.technawabs.app.mharo.base.scanner.GraphicOverlay;
 import com.technawabs.app.mharo.base.scanner.VisionProcessorBase;
+import com.technawabs.app.mharo.base.utils.XMLReader;
 
 import java.io.IOException;
 import java.util.List;
@@ -35,12 +39,15 @@ public class BarcodeScanningProcessor extends VisionProcessorBase<List<FirebaseV
 
   private final FirebaseVisionBarcodeDetector detector;
 
-  public BarcodeScanningProcessor() {
+  private Context context;
+
+  public BarcodeScanningProcessor(Context context) {
     // Note that if you know which format of barcode your app is dealing with, detection will be
     // faster to specify the supported barcode formats one by one, e.g.
     // new FirebaseVisionBarcodeDetectorOptions.Builder()
     //     .setBarcodeFormats(FirebaseVisionBarcode.FORMAT_QR_CODE)
     //     .build();
+      this.context = context;
     detector = FirebaseVision.getInstance().getVisionBarcodeDetector();
   }
 
@@ -67,6 +74,14 @@ public class BarcodeScanningProcessor extends VisionProcessorBase<List<FirebaseV
     for (int i = 0; i < barcodes.size(); ++i) {
       FirebaseVisionBarcode barcode = barcodes.get(i);
       Log.d(TAG,barcode.getRawValue()+"\t"+i);
+      if(barcode!=null&&barcode.getRawValue()!=null){
+          String res = barcode.getRawValue();
+          boolean isValidXML=XMLReader.readXMLResponse(res);
+          if(isValidXML){
+              Intent intent = new Intent(context,DashboardActivity.class);
+              context.startActivity(intent);
+          }
+      }
       BarcodeGraphic barcodeGraphic = new BarcodeGraphic(graphicOverlay, barcode);
       graphicOverlay.add(barcodeGraphic);
     }
